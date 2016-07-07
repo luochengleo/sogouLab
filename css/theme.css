@@ -2779,7 +2779,7 @@ button[type="submit"] .form-loading {
 }
 .pricing-table .price {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 80px;
+  font-size: 6vh;
   line-height: 80px;
   font-weight: 300;
   color: #292929;
