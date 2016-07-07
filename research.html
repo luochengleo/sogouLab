@@ -21,6 +21,14 @@
 		<div class="nav-container">
 			<nav></nav>
 		</div>
+		<section>
+			<div class="articles">
+				<ol>
+					<script id="article-list" type="text/x-handlebars-template">
+					</script>
+				</ol>
+			</div>
+		</section>
 		<div class="main-container">
 			<footer class="footer-1 bg-dark">
 			</footer>
@@ -37,6 +45,7 @@
         <script src="js/smooth-scroll.min.js"></script>
         <script src="js/parallax.js"></script>
         <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
 		<script>
 			var nav_content = document.querySelector('#nav-tpl').import;
 			var nav = nav_content.querySelector('.nav-bar');
