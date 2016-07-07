@@ -15,6 +15,11 @@
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
     </head>
+    <style>
+    .table > tbody > tr > td {
+     vertical-align: middle;
+}
+</style>
     <body>
 
       <div class="nav-container">
@@ -42,8 +47,11 @@
   		                        <li>
   		                            <a href="dataset.html">数据集&nbsp;</a>
   		                        </li>
+                              <li>
+  		                            <a href="about_us.html">关于我们&nbsp;</a>
+  		                        </li>
   		                        <li class="has-dropdown">
-  		                            <a href="races.html">比赛&nbsp;</a>
+  		                            <a href="races.html">测评&nbsp;</a>
   		                            <ul>
   		                                <li class="has-dropdown">
   		                                    <a href="#">
@@ -102,7 +110,8 @@
 
 		        </div>
 
-		    </section><section id="dataset">
+		    </section>
+        <section id="dataset">
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-sm-12">
@@ -266,6 +275,157 @@
 		                                    </p>
 		                                </div>
 		                            </li>
+
+<!-- open dataset -->
+                                <li>
+		                                <div class="tab-title">
+		                                    <span>开放数据集</span>
+		                                </div>
+		                                <div class="tab-content">
+		                                    <h5 class="uppercase">开放数据集</h5>
+		                                    <hr>
+		                                    <p>
+		                                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+		                                    </p>
+		                                    <p>
+		                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.
+		                                    </p>
+											<hr>
+                      <table class="table table-hover table-sm">
+  <tr>
+    <th>类别</th>
+    <th>数据集</th>
+    <th>大小</th>
+    <th>数据样例</th>
+    <th>对比搜狗实验室数据</th>
+    <th>对比数据集情况</th>
+    <th>数据时间点</th>
+    <th>负责人</th>
+  </tr>
+  <tr>
+    <td rowspan="6">原始数据（搜狗收集到的原始数据）</td>
+    <td>SogouT(网页库)</td>
+    <td>10亿 网页</td>
+    <td>docid<br>url<br>网页原代码，带html标签<br>……</td>
+    <td>更新数据，数量从1.5亿网页增加至10亿网页</td>
+    <td>TREC使用Clueweb12数据集，有7.3亿英文网页；中文领域没有其他亿级网页库。</td>
+    <td>7.10</td>
+    <td>陈杰</td>
+  </tr>
+  <tr>
+    <td>SogouCA（新闻网页库</td>
+    <td>500万 网页</td>
+    <td>docid<br>url<br>（title）,(新闻正文)</td>
+    <td>更新数据，数据量从100万网页增加至500万</td>
+    <td>路透社发布过200多万的新闻网页，以英文为主</td>
+    <td>7.15</td>
+    <td>孙健</td>
+  </tr>
+  <tr>
+    <td>问问问答库</td>
+    <td>500万页面</td>
+    <td>docid<br>url<br>网页原代码，带html标签<br>……</td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.20</td>
+    <td>郭博</td>
+  </tr>
+  <tr>
+    <td>医疗网页库</td>
+    <td>100万页面（50万医疗问答+50万论文）</td>
+    <td></td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.30</td>
+    <td>何一峰</td>
+  </tr>
+  <tr>
+    <td>搜索点击日志（pc &amp; wap</td>
+    <td>无线1亿条记录，pc 1亿条记录</td>
+    <td>Userid，sessionid， query hash，[showurl id，title hash, order，clicktime，label]</td>
+    <td>更新数据，增加了titile，label字段</td>
+    <td>Yandex在WSCD2014公布的用户搜索日志，包含1.7亿条记录，3500千万session。</td>
+    <td>7.10</td>
+    <td>张帅</td>
+  </tr>
+  <tr>
+    <td>语音助手对话</td>
+    <td>1万问答对</td>
+    <td>[question,answer]</td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.10</td>
+    <td>龚雨成</td>
+  </tr>
+  <tr>
+    <td rowspan="6">加工数据（搜狗在原始数据基础上计算得到）</td>
+    <td>知识图谱三元组</td>
+    <td>约100万 实体,1000万关系</td>
+    <td>[entity1,entity2,relation]</td>
+    <td>新数据</td>
+    <td>Freebase 提供19亿triples下载，将于16年9月关闭服务，改由google提供API服务，不可下载数据。<br>中文没有公开知识图谱数据。</td>
+    <td>7.15</td>
+    <td>龚雨成</td>
+  </tr>
+  <tr>
+    <td>词向量</td>
+    <td>约100万词的词向量</td>
+    <td>[word, embedding]</td>
+    <td>新数据</td>
+    <td>Google发布了开源项目word2vec用于计算词向量</td>
+    <td>7.20</td>
+    <td>邢宁</td>
+  </tr>
+  <tr>
+    <td>相关性标注</td>
+    <td>约5万条数据</td>
+    <td>[query, URL, score]</td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.10</td>
+    <td>姚婷</td>
+  </tr>
+  <tr>
+    <td>同义词</td>
+    <td>10万同义词对</td>
+    <td>[word，synonym，level]</td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.10</td>
+    <td>陈炜鹏</td>
+  </tr>
+  <tr>
+    <td>页面权威度</td>
+    <td>10亿页面(对应SogouT页面）</td>
+    <td>[url, pagerank]</td>
+    <td>更新数据</td>
+    <td></td>
+    <td>7.30</td>
+    <td>祝耀华</td>
+  </tr>
+  <tr>
+    <td>页面主图</td>
+    <td>100 万页面</td>
+    <td>[url, picurl]</td>
+    <td>新数据</td>
+    <td></td>
+    <td>7.10</td>
+    <td>祝耀华</td>
+  </tr>
+</table>
+											<hr>
+											<ul class="link-list">
+												<li>
+												    <a href="#">数据下载</a>
+												</li>
+												<li>
+													<a href="#">数据许可协议</a>
+												</li>
+											</ul>
+		                                </div>
+		                            </li>
+
+
 		                        </ul>
 		                    </div>
 
