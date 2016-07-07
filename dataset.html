@@ -306,7 +306,12 @@
     <td rowspan="6">原始数据（搜狗收集到的原始数据）</td>
     <td>SogouT(网页库)</td>
     <td>10亿 网页</td>
-    <td>docid<br>url<br>网页原代码，带html标签<br>……</td>
+    <td>&lt;DOC&gt;<br />
+&lt;DOCNO&gt;docid&lt;/DOCNO&gt;<br />
+&lt;URL&gt;url&lt;/URL&gt;<br />
+网页原代码，带html标签<br />
+……<br />
+&lt;/DOC&gt;</td>
     <td>更新数据，数量从1.5亿网页增加至10亿网页</td>
     <td>TREC使用Clueweb12数据集，有7.3亿英文网页；中文领域没有其他亿级网页库。</td>
     <td>7.10</td>
@@ -315,7 +320,12 @@
   <tr>
     <td>SogouCA（新闻网页库</td>
     <td>500万 网页</td>
-    <td>docid<br>url<br>（title）,(新闻正文)</td>
+    <td>&lt;doc&gt;<br />
+&lt;docno&gt;docid&lt;/docno&gt;<br />
+&lt;url&gt;url&lt;/url&gt;<br />
+&lt;contenttitle&gt;（title）&lt;/contenttitle&gt;<br />
+&lt;content&gt; (新闻正文)&lt;/content&gt;<br />
+&lt;/doc&gt;</td>
     <td>更新数据，数据量从100万网页增加至500万</td>
     <td>路透社发布过200多万的新闻网页，以英文为主</td>
     <td>7.15</td>
@@ -324,7 +334,13 @@
   <tr>
     <td>问问问答库</td>
     <td>500万页面</td>
-    <td>docid<br>url<br>网页原代码，带html标签<br>……</td>
+    <td>&lt;DOC&gt;<br />
+&lt;DOCNO&gt;docid&lt;/DOCNO&gt;<br />
+&lt;URL&gt;url&lt;/URL&gt;<br />
+网页原代码，带html标签<br />
+……<br />
+&lt;/DOC&gt;<br />
+&lt;/DOC&gt;</td>
     <td>新数据</td>
     <td></td>
     <td>7.20</td>
@@ -401,7 +417,7 @@
     <td>更新数据</td>
     <td></td>
     <td>7.30</td>
-    <td>祝耀华</td>
+    <td>刘玉岗</td>
   </tr>
   <tr>
     <td>页面主图</td>
