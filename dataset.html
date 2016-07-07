@@ -111,9 +111,10 @@
 		                    <h4 class="uppercase mb80">天工智能数据研究院数据集</h4>
 									<div class="tabbable">
 										<script id="panel" type="text/x-handlebars-template">
-											<ul class="nav nav-pills nav-stacked col-md-3">
-											{{#each panel}}
-												<li><a href="#collapse{{id}}" data-toggle="collapse">{{panel-title}}</a></li>
+											<ul class="nav nav-pills nav-stacked col-md-3" id="accordion">
+												<li class"active"><a href="#intro" data-toggle="tab">数据集介绍</a></li>
+												{{#each panel}}
+												<li><a href="#collapse{{id}}" data-toggle="collapse" data-parent="#accordion">{{panel-title}}</a></li>
 												<div id="collapse{{id}}" class="collapse">
 													<ul class="nav nav-pills nav-stacked col-md-offset-1">
 													{{#each dataset}}
@@ -121,9 +122,15 @@
 													{{/each}}
 													</ul>
 												</div>
-											{{/each}}
+												{{/each}}
 											</ul>
 											<ul class="tab-content col-md-9">
+												<div class="tab-pane active" id="intro">
+													<h3> 简介 </h3>
+													<p>
+													Ut sagittis consectetur tortor imperdiet mattis. Aenean faucibus massa vitae consectetur hendrerit. Sed facilisis justo id sem ullamcorper ultricies. Aliquam erat volutpat. Ut blandit purus erat, vitae vestibulum odio pharetra vitae. Morbi consectetur eleifend diam vel tristique. Duis non nisi quam. Aliquam commodo nunc ex, ut sollicitudin nisi luctus at. Nulla id magna maximus, rutrum orci eu, iaculis leo.
+													</p>
+												</div>
 												{{#each panel}}
 													{{#each dataset}}
 													<div class="tab-pane {{initState}}" id="{{tabid}}">
@@ -249,7 +256,7 @@
 				"id" : 1,
 				"panel-title": "网页语料",
 				"dataset" : [
-				{"initState" : "active", "tabid": "a", "title": "SogouT", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sagittis lacus a feugiat. Aliquam bibendum dolor sed orci pellentesque vestibulum. Etiam ex magna, porta eget dictum ut, euismod a diam."},
+				{"initState" : "", "tabid": "a", "title": "SogouT", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sagittis lacus a feugiat. Aliquam bibendum dolor sed orci pellentesque vestibulum. Etiam ex magna, porta eget dictum ut, euismod a diam."},
 				{"initState" : "", "tabid": "b", "title": "页面权威", "description": "iQuisque eget porttitor massa. Duis tempor interdum vestibulum. In id nibh eget velit auctor vehicula. Curabitur sollicitudin sagittis arcu nec facilisis."},
 				{"initState" : "", "tabid": "c", "title": "新闻", "description": "iNam tincidunt sed lacus ornare commodo. Maecenas lobortis odio non leo faucibus efficitur. Nam orci eros, accumsan et nibh ut, posuere congue lorem. "},
 				{"initState" : "", "tabid": "d", "title": "相关性标注", "description": "Sed sed erat id elit laoreet pellentesque lacinia a urna. Mauris sed fermentum massa, et lacinia nulla. Etiam sed imperdiet nisl. Fusce viverra tristique m"},
