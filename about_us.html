@@ -129,9 +129,7 @@
   		                        <li>
   		                            <a href="#members">机构成员</a>
   		                        </li>
-  		                        <li class="active">
-                                <a href="#researchers">骨干研究人员</a>
-                              </li>
+  		                        
   		                    </ol>
   		                </div>
   		            </div>
@@ -343,35 +341,7 @@
 		        </div>
 
 		    </section>
-        <section id="researchers">
-          <div class="container">
-            <div class="row mb64 mb-xs-24">
-                <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-                    <h3>骨干研究人员</h3>
-                </div>
-            </div>
 
-              <script id="member-tpl" type="text/x-handlebars-template">
-                {{#each members}}
-                  <div class="col-sm-4 top-buffer">
-                    <div class="pull-left image">
-                      <img src="{{this.pic}}" class="img-circle avatar">
-                    </div>
-                    <div class="pull-left meta">
-                      <div class="title">
-                        <h4>{{this.name}}</h4>
-                        <span><strong>{{this.unit}}</strong>{{this.position}}</span>
-                      </div>
-                    </div>
-                  </div>
-                {{/each}}
-              </script>
-              <div id="member-placeholder"></div>
-
-          </div>
-
-
-        </section>
 
 
         <footer class="footer-1 bg-dark">
@@ -478,32 +448,10 @@
     			});
     			return false;
         });
-        $('body > div.main-container > section.page-title.page-title-4.image-bg.overlay.parallax > div.container > div > div.col-md-6.text-right > ol > li:nth-child(3) > a').on('click', function(){
-          $.smoothScroll({
-    				scrollTarget: '#researchers',
-    			});
+
     			return false;
         });
         </script>
-        <script>
-          var tplsrc = $('#member-tpl').html();
-          var tpl = Handlebars.compile(tplsrc);
-          var context = { members:[
-            {name: "唐杰", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "朱军", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "李国良", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "刘洋", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "刘奕群", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "刘知远", unit: "清华大学计算机系", position: "助理教授", pic: "img/user.jpg" },
-            {name: "李建民", unit: "清华大学计算机系", position: "副教授", pic: "img/user.jpg" },
-            {name: "许静芳", unit: "搜狗公司", position: "总监", pic: "img/user.jpg" },
-            {name: "王砚峰", unit: "搜狗公司", position: "总监", pic: "img/user.jpg" },
-            {name: "李刚", unit: "搜狗公司", position: "总经理", pic: "img/user.jpg" },
-            {name: "郭奇", unit: "搜狗公司", position: "高级总监", pic: "img/user.jpg" },
-            {name: "佟子健", unit: "搜狗公司", position: "总监", pic: "img/user.jpg" },
-          ]}
-          var compiled = tpl(context);
-          $('#member-placeholder').html(compiled);
-        </script>
+
     </body>
 </html>
