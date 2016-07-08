@@ -15,8 +15,8 @@
         <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
     </head>
-    <body>
 
+    <body>
       <div class="nav-container">
   		    <nav>
   		        <div class="nav-bar">
@@ -90,7 +90,7 @@
 
 			<section class="image-bg bg-dark parallax overlay pt120 pb120">
 		        <div class="background-image-holder">
-		            <img alt="Background Image" class="background-image" src="img/idea-icon.jpg">
+		            <img alt="Background Image" class="background-image" src="img/shujuji.jpg">
 		        </div>
 		        <div class="container">
 		            <div class="row">
@@ -147,12 +147,20 @@
                             <hr>
                             <h3>对比数据集情况</h3>
                             <p>{{comparision}}</p>
-                            <h3>数据时间点</h3>
-                            <p>{{date}}</p>
+							<hr>
+							<h3>成果列表</h3>
+							<ol class="big-numbered-list">
+								{{#each achievements}}
+								<li><h4><a href="{{link}}">{{title}}</a></h4><p>{{ref}}</p></li>
+								{{/each}}
+							</ol>
                             <hr>
-                            <h3>负责人</h3>
-                            <p>{{admin}}</p>
-                            <hr>
+							<h3>数据许可协议</h3>
+							{{{term}}}
+							<hr>
+							<h3>数据下载</h3>
+							{{{downloads}}}
+							<hr>
 
 														<p>{{description}}</p>
 													</div>
@@ -282,8 +290,21 @@
  			"example": "<code data-gist-id='108a0e2d074d6a65672d62160997b9f2'></code>",
  			"comparision_status": "更新数据，数量从1.5亿网页增加至10亿网页",
  			"comparision": "TREC使用Clueweb12数据集，有7.3亿英文网页；中文领域没有其他亿级网页库。",
- 			"date": 7.10,
- 			"admin": "陈杰",
+ 			"achievements": [{
+ 				"title": "Data Cleansing for Web Information Retrieval using Query Independent Features.",
+ 				"link": "https://www.sogou.com/labs/paper/Data_Cleansing_for_Web_Information_Retrieval_using_Query_Independent_Features.pdf",
+ 				"ref": "Yiqun Liu, Min Zhang, Rongwei Cen, Liyun Ru, Shaoping Ma. Journal of the American Society for Information Science and Technology. DOI: 10.1002/asi.20633."
+ 			}, {
+ 				"title": "R-SpamRank: A Spam Detection Algorithm Based on Link Analysis",
+ 				"link": "https://www.sogou.com/labs/paper/R-SpamRank_A_Spam_Detection_Algorithm_Based_on_Link_Analysis.pdf",
+ 				"ref": "Chenmin Liang, Liyun Ru, Xiaoyan Zhu, to be appeared at the Journal of Computational Information Systems."
+ 			}, {
+ 				"title": "Incorporating Web Browsing Information into Anch or Texts for Web Search",
+ 				"link": "http://www.springerlink.com/index/VJR47N0752RU3776.pdf",
+ 				"ref": "Bo Zhou, Yiqun Liu, Min Zhang, Yijiang Jin, Shaoping Ma. Information Retrieval Volume 14, Issue 3: 290-314, 2011."
+ 			}],
+ 			"term": "下载前请仔细阅读<a href='https://www.sogou.com/labs/dl/license.html'>SogouLab 数据使用许可证</a>，请在使用了本语料库的论文、技术报告等研究成果中添加如下参考文献引用：Yiqun Liu, Fei Chen, Weize Kong, Huijia Yu, Min Zhang, Shaoping Ma, Liyun Ru. Identifying Web Spam with the Wisdom of the Crowds. ACM Transaction on the Web. Volume 6, Issue 1, Article No. 2, 30 pages. March 2012.  Please read the <a href='https://www.sogou.com/labs/dl/license_en.html'> License for Use of Sogou Lab Data </a> carefully before downloading.",
+ 			"downloads": "<ul><li>迷你版(样例数据, 61KB)：<a href='http://download.labs.sogou.com/dl/sogoulabdown/SogouT/SogouT.mini.tar.gz'>tar.gz格式</a>，<a href='http://download.labs.sogou.com/dl/sogoulabdown/SogouT/SogouT.mini.zip'>zip格式</a></li><li>完整版(1TB)：(<a href='https://www.sogou.com/labs/dl/contact.html'>硬盘拷贝</a>)</li><li>历史版本(130GB)：V2.0(<a href='https://www.sogou.com/labs/dl/contact.html'>硬盘拷贝</a>)</li></ul>",
  			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sagittis lacus a feugiat. Aliquam bibendum dolor sed orci pellentesque vestibulum. Etiam ex magna, porta eget dictum ut, euismod a diam."
  		}, {
  			"tabid": "b",
@@ -305,7 +326,16 @@
  			"comparision_status": "更新数据，数据量从100万网页增加至500万",
  			"comparision": "路透社发布过200多万的新闻网页，以英文为主。",
  			"date": 7.15,
- 			"admin": "孙健",
+      "achievements": [
+        {
+          "title": "Automatic Online News Issue Construction in Web Environment",
+          "link": "https://www.sogou.com/labs/paper/Automatic_Online_News_Issue_Construction_in_Web_Environment.pdf",
+          "ref": "Canhui Wang, Min Zhang, Shaoping ma, Liyun Ru, the 17th International World Wide Web Conference (WWW08), Beijing, April, 2008."
+        }
+      ],
+      "term": "下载前请仔细阅读<a href='https://www.sogou.com/labs/dl/license.html'>SogouLab 数据使用许可证</a>， Please read the <a href='https://www.sogou.com/labs/dl/license_en.html'> License for Use of Sogou Lab Data </a> carefully before downloading.",
+      "downloads": "<ul><li>类别标记说明(URL到类别的映射关系，3KB)：<a href='http://download.labs.sogou.com/dl/sogoulabdown/categories_2012.txt'>txt格式</a></li> <li>迷你版(样例数据, 101KB)：<a href='http://download.labs.sogou.com/dl/sogoulabdown/SogouCA/news_tensite_xml.smarty.tar.gz'>tar.gz格式</a>，<a href='http://download.labs.sogou.com/dl/sogoulabdown/SogouCA/news_tensite_xml.smarty.zip'>zip格式</a> </li> <li>完整版(711MB)：<a href='http://www.sogou.com/labs/dl/ftp.jsp?dir=/Data/SogouCA/news_tensite_xml.full.tar.gz'>tar.gz格式</a>，<a href='http://www.sogou.com/labs/dl/ftp.jsp?dir=/Data/SogouCA/news_tensite_xml.full.zip'>zip格式</a></li> <li> 历史版本：2008版：<ul> <li>完整版(同时提供<a href='https://www.sogou.com/labs/dl/contact.html'>硬盘拷贝</a> ,1.02GB)：<a href='http://www.sogou.com/labs/dl/ftp.jsp?dir=/Data/SogouCA/SogouCA.tar.gz' >tar.gz格式</a> </li><li> 迷你版(样例数据, 3KB)：<a href='http://download.labs.sogou.com/dl/sogoulabdown/SogouCA/SogouCA.mini.tar.gz'>tar.gz格式</a></li><li> 精简版(一个月数据, 437MB)：<a href='http://www.sogou.com/labs/dl/ftp.jsp?dir=/Data/SogouCA/SogouCA.reduced.tar.gz'>tar.gz格式</a></li><li> 类别标记说明(URL到类别的映射关系，4KB)：<a href='http://download.labs.sogou.com/dl/sogoulabdown/categories.txt'>txt格式</a></li></ul></ul>",
+      "admin": "孙健",
  			"description": "iNam tincidunt sed lacus ornare commodo. Maecenas lobortis odio non leo faucibus efficitur. Nam orci eros, accumsan et nibh ut, posuere congue lorem. "
  		}, {
  			"tabid": "d",

@@ -29,6 +29,10 @@
 }
 .top-buffer{
   margin-top: 20px;
+
+}
+.page-title-3, .page-title-4 {
+    height: 420px;
 }
     </style>
     <body>
@@ -108,29 +112,33 @@
 		</div>
 
 		<div class="main-container">
-      <section class="page-title page-title-2 bg-secondary">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="uppercase mb8">关于我们</h2>
-                        <p class="lead mb0">A descriptive subtitle for your page.</p>
-                    </div>
-                    <div class="col-md-6 text-right">
-                        <ol class="breadcrumb breadcrumb-2">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a href="#">Elements</a>
-                            </li>
-                            <li class="active">Page Titles</li>
-                        </ol>
-                    </div>
-                </div>
+      <section class="page-title page-title-4 image-bg overlay parallax">
+  		        <div class="background-image-holder">
+  		            <img alt="Background Image" class="background-image" src="img/aboutus.jpg">
+  		        </div>
+  		        <div class="container">
+  		            <div class="row">
+  		                <div class="col-md-6">
+  		                    <h3 class="uppercase mb0">关于我们</h3>
+  		                </div>
+  		                <div class="col-md-6 text-right">
+  		                    <ol class="breadcrumb breadcrumb-2">
+  		                        <li>
+  		                            <a href="#admin">管理委员会</a>
+  		                        </li>
+  		                        <li>
+  		                            <a href="#members">机构成员</a>
+  		                        </li>
+  		                        <li class="active">
+                                <a href="#researchers">骨干研究人员</a>
+                              </li>
+  		                    </ol>
+  		                </div>
+  		            </div>
 
-            </div>
+  		        </div>
 
-        </section>
+  		    </section>
 
         <section class="bg-primary">
 				<div class="container">
@@ -170,7 +178,7 @@
 				</div>
 			</section>
 
-      <section class="page-title page-title-4 bg-secondary">
+      <section  class="page-title page-title-4 bg-secondary">
 		        <div class="container">
 		            <div class="row">
 		                <div class="col-md-6">
@@ -195,7 +203,7 @@
 
 		    </section>
 
-        <section>
+        <section id="admin">
               <div class="container">
                   <div class="row">
                       <div class="col-md-4 col-sm-6">
@@ -280,7 +288,7 @@
           </section>
 
 
-          <section>
+          <section id="members">
 		        <div class="container">
 		            <div class="row mb64 mb-xs-24">
 		                <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
@@ -335,7 +343,7 @@
 		        </div>
 
 		    </section>
-        <section>
+        <section id="researchers">
           <div class="container">
             <div class="row mb64 mb-xs-24">
                 <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
@@ -457,6 +465,26 @@
         <script src="js/parallax.js"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+        <script>
+        $('body > div.main-container > section.page-title.page-title-4.image-bg.overlay.parallax > div.container > div > div.col-md-6.text-right > ol > li:nth-child(1) > a').on('click', function(){
+          $.smoothScroll({
+    				scrollTarget: '#admin',
+    			});
+    			return false;
+        });
+        $('body > div.main-container > section.page-title.page-title-4.image-bg.overlay.parallax > div.container > div > div.col-md-6.text-right > ol > li:nth-child(2) > a').on('click', function(){
+          $.smoothScroll({
+    				scrollTarget: '#members',
+    			});
+    			return false;
+        });
+        $('body > div.main-container > section.page-title.page-title-4.image-bg.overlay.parallax > div.container > div > div.col-md-6.text-right > ol > li:nth-child(3) > a').on('click', function(){
+          $.smoothScroll({
+    				scrollTarget: '#researchers',
+    			});
+    			return false;
+        });
+        </script>
         <script>
           var tplsrc = $('#member-tpl').html();
           var tpl = Handlebars.compile(tplsrc);
